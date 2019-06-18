@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        ~ function () {
+            function computed() {
+                var pcWidth = document.documentElement.clientWidth
+                var des = 750;
+                if (pcWidth > 750) {
+                    document.documentElement.style.fontSize = "100px";
+                    return;
+                }
+                document.documentElement.style.fontSize = pcWidth / des * 100 + "px";
+            }
+            computed()
+
+        }();
+</script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" id="page1">
+                <img class="desk" src="images\desk.png" alt="">
+                <img class="zhi" src="images\zhi.png" alt="">
+                <img class="shiqu" src="images\shiqu.png" alt="">
+                <img class="qingchun" src="images\qingchun.png" alt="">
+                <img class="peoples" src="images\peoples.png" alt="">
+            </div>
+            <div class="swiper-slide" id="page2">
+            </div>
+            <div class="swiper-slide" id="page3">Slide 3</div>
+        </div>
+        
+        <div class="swiper-button-next"></div>
+        
+    </div>
+
+</body>
+</html>
+<script src="js/swiper.min.js"></script>
+<script>
+ window.onload=function(){
+    var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical', 
+    loop: true, 
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+    }
+    
+  })        
+ }
+</script>
